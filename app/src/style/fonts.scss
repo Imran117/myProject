@@ -1,0 +1,19 @@
+$fonts: ('Gilroy', 'Bold', 700),
+        ('Gilroy', 'Extrabold', 800),
+        ('Gilroy', 'Semibold', 600),
+        ('Gilroy', 'Medium', 500),
+        ('Gilroy', 'Regular', 400),
+        ('Ubuntu', 'Regular', 400),
+        ('Ubuntu', 'Medium', 500),
+        ('Ubuntu', 'Bold', 700),
+        ('Unlock', 'Regular', 400);
+
+@each $font-name, $font-subname, $font-weight in $fonts {
+    @font-face {
+        font-family:$font-name;
+        src: url(../font/#{$font-name}/#{$font-name}-#{$font-subname}.woff);
+        font-style: normal;
+        font-weight: $font-weight;
+    }
+}
+
